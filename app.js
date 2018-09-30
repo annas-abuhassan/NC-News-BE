@@ -6,6 +6,7 @@ const { DB_URL } =
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.set("view_engine", "ejs");
+const { handle400, handle404, handle500 } = require("./utils");
 
 mongoose
   .connect(DB_URL)
@@ -24,23 +25,8 @@ app.use("/*", (req, res, next) => {
   next({ status: 404 });
 });
 
-app.use((err, req, res, next) => {
-  if (
-    err.name === "ValidationError" ||
-    err.name === "CastError" ||
-    err.name === "Error"
-  )
-    res.status(400).send({ msg: err.msg || "Bad request" });
-  next(err);
-});
-
-app.use((err, req, res, next) => {
-  if (err.status === 404) res.status(404).send({ msg: err.msg || "Not found" });
-  else next(err);
-});
-
-app.use((err, req, res, next) => {
-  res.status(500).send({ msg: "Internal Server Error" });
-});
+app.use(handle400);
+app.use(handle404);
+app.use(handle500);
 
 module.exports = app;

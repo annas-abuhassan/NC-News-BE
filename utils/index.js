@@ -39,9 +39,30 @@ const checkId = id => {
   if (!id) throw { status: 404, msg: "ID does not exist" };
 };
 
+const handle400 = (err, req, res, next) => {
+  if (
+    err.name === "ValidationError" ||
+    err.name === "CastError" ||
+    err.name === "Error"
+  )
+    res.status(400).send({ name: err.name, msg: err.msg || "Bad request" });
+  next(err);
+};
+
+const handle404 = (err, req, res, next) => {
+  if (err.status === 404) res.status(404).send({ msg: err.msg || "Not found" });
+  else next(err);
+};
+const handle500 = (err, req, res, next) => {
+  res.status(500).send({ msg: "Internal Server Error" });
+};
+
 module.exports = {
   formatArticles,
   formatComments,
   formatArticlesWithCommentCount,
-  checkId
+  checkId,
+  handle400,
+  handle404,
+  handle500
 };
