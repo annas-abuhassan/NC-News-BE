@@ -1,8 +1,6 @@
 # Northcoders News API
 
-This is my NC News Project.
-
-The aim of this project was to create a RESTful API using express, which is able to serve data from a mongoDB database.
+The aim of this project was to build a RESTful API using both express and mongoDB.
 
 A live version of this app has can be found [here](https://nc-news-aah.herokuapp.com)
 
