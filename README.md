@@ -68,7 +68,7 @@ GET /api/topics/:topic_slug/articles
 ```http
 POST /api/topics/:topic_slug/articles
 # Add a new article to a topic. This route requires a JSON body with title and body key value pairs
-# e.g: `{ "title": "new article", "body": "This is my new article content", "created_by": "user_id goes here"}`
+# e.g: `{ "title": "new article", "body": "This is my new article content", "created_by": "user_id goes here"}` DONE BUT MAYBE NEEDS MORE TESTING
 ```
 
 ```http
@@ -83,29 +83,29 @@ GET /api/articles/:article_id   DONE
 
 ```http
 GET /api/articles/:article_id/comments
-# Get all the comments for a individual article
+# Get all the comments for a individual article DONE
 ```
 
 ```http
 POST /api/articles/:article_id/comments
-# Add a new comment to an article. This route requires a JSON body with body and created_by key value pairs
+# Add a new comment to an article. This route requires a JSON body with body and created_by key value pairs DONE
 # e.g: `{"body": "This is my new comment", "created_by": "user_id goes here"}`
 ```
 
 ```http
 PATCH /api/articles/:article_id
-# Increment or Decrement the votes of an article by one. This route requires a vote query of 'up' or 'down'
+# Increment or Decrement the votes of an article by one. This route requires a vote query of 'up' or 'down' DONE
 # e.g: `/api/articles/:article_id?vote=up`
 ```
 
 ```http
 PATCH /api/comments/:comment_id
-# Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down'
+# Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down' DONE
 # e.g: `/api/comments/:comment_id?vote=down`
 ```
 
 ```http
-DELETE /api/comments/:comment_id
+DELETE /api/comments/:comment_id DONE
 # Deletes a comment
 ```
 

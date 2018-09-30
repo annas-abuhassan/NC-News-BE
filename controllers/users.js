@@ -1,4 +1,5 @@
 const { User } = require("../models");
+const { checkId } = require("../utils");
 
 const getUsers = (req, res, next) => {
   User.find().then(users => {
@@ -9,7 +10,7 @@ const getUsers = (req, res, next) => {
 const getUserByUsername = (req, res, next) => {
   User.findOne({ username: req.params.username })
     .then(user => {
-      if (!user) throw { status: 404 };
+      checkId(user);
       res.send({ user });
     })
     .catch(next);

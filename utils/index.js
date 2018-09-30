@@ -24,4 +24,24 @@ const formatComments = (userDoc, articleDoc, commentData) => {
   });
 };
 
-module.exports = { formatArticles, formatComments };
+const formatArticlesWithCommentCount = (articleDocs, commentDocs) => {
+  return (article = articleDocs.map(article => {
+    return (article = {
+      ...article,
+      comment_count: commentDocs.filter(comment => {
+        return comment.belongs_to == `${article._id}`;
+      }).length
+    });
+  }));
+};
+
+const checkId = id => {
+  if (!id) throw { status: 404, msg: "ID does not exist" };
+};
+
+module.exports = {
+  formatArticles,
+  formatComments,
+  formatArticlesWithCommentCount,
+  checkId
+};

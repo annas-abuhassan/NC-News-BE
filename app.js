@@ -2,6 +2,9 @@ const app = require("express")();
 const apiRouter = require("./routes/api");
 const mongoose = require("mongoose");
 const { DB_URL } = require("./config");
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.set("view_engine", "ejs");
 
 mongoose
   .connect(DB_URL)
@@ -10,6 +13,10 @@ mongoose
   })
   .catch();
 
+app.get("/", (req, res, next) => {
+  res.sendFile(`${__dirname}/index.html`);
+});
+
 app.use("/api", apiRouter);
 
 app.use("/*", (req, res, next) => {
@@ -17,12 +24,17 @@ app.use("/*", (req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-  if (err.name === "CastError") res.status(400).send({ msg: "Bad request" });
-  else next(err);
+  if (
+    err.name === "ValidationError" ||
+    err.name === "CastError" ||
+    err.name === "Error"
+  )
+    res.status(400).send({ msg: err.msg || "Bad request" });
+  next(err);
 });
 
 app.use((err, req, res, next) => {
-  if (err.status === 404) res.status(404).send({ msg: "Not found" });
+  if (err.status === 404) res.status(404).send({ msg: err.msg || "Not found" });
   else next(err);
 });
 
