@@ -4,13 +4,13 @@ This is my NC News Project.
 
 The aim of this project was to create a RESTful API using express, which is able to serve data from a mongoDB database.
 
-A live version of this app has can be found [here](https://nc-news-aah.herokuapp.com/api)
+A live version of this app has can be found [here](https://nc-news-aah.herokuapp.com)
 
 ## Getting Started
 
 ### Prerequisites
 
-You will need at least Node v8 point something and Mongo something version.
+You will need at least Node 8.12.0 and MongoDB 4.0.
 
 This project requires the following packages:
 
