@@ -11,28 +11,59 @@
 </head>
 
 <body>
-  <h2>/api</h2>
+  <h2>GET /api</h2>
+  <p>Current page, displays the list of possible endpoints</p>
 
+  <h2>/api/topics</h2>
+  <p>Returns an array of topics</p>
 
-  <h2>GET /topics => Returns an array of topics</h2>
-  <h2>GET /topics/:slug => Returns an array of topics, specified by a slug</h2>
-  <h2>GET /topics/:slug/articles => Returns an array of articles, specified by a slug</h2>
-  <h2>GET /articles => Returns an array of articles</h2>
-  <h2>GET /articles/:article_id => Returns a single article, specified by an article id</h2>
-  <h2>PATCH /articles/:article_id?votes="up" => Returns a single article, specified by an article id, with an
-    incremented vote count</h2>
-  <h2>PATCH /articles/:article_id?votes="down" => Returns a single article, specified by an article id, with a
-    decremented vote count</h2>
-  <h2>GET /articles/:article_id/comments => Returns an array of comments for an article, specified by an article id</h2>
-  <h2>POST /articles/:article_id/comments => Adds and returns a new comment, to an article, specified by an article id</h2>
-  <h2>GET /comments => Returns an array of comments</h2>
-  <h2>PATCH /comments/:comment_id?votes="up" => Returns a single comment, specified by a comment id, with an
-    incremented vote count</h2>
-  <h2>PATCH /comments/:comment_id?votes="down" => Returns a single comment, specified by a comment id, with an
-    decremented vote count</h2>
-  <h2>DELETE /comments/:comment_id => Deletes a single comment, specified by a comment id</h2>
-  <h2>GET /users => Returns an array of users</h2>
-  <h2>GET /users/:username => Returns an array of users, specified by a username</h2>
+  <h2>GET /api/topics/:slug</h2>
+  <p>Returns an array of topics, specified by a slug</p>
+
+  <h2>GET /api/topics/:slug/articles</h2>
+  <p>Returns an array of articles, specified by a slug</p>
+
+  <h2>GET /api/articles</h2>
+  <p>Returns an array of articles</p>
+
+  <h2>GET /api/articles/:article_id</h2>
+  <p>Returns a single article, specified by an article id</p>
+
+  <h2>PATCH /api/articles/:article_id?votes="up"</h2>
+  <p>Returns a single article, specified by an article id, with an
+    incremented vote count</p>
+
+  <h2>PATCH /api/articles/:article_id?votes="down"</h2>
+  <p>Returns a single article, specified by an article id, with a
+    decremented vote count</p>
+
+  <h2>GET /api/articles/:article_id/comments</h2>
+  <p>Returns an array of comments for an article, specified by an article id</p>
+
+  <h2>POST /api/articles/:article_id/comments</h2>
+  <p>Adds and returns a new comment, to an article, specified by an article
+    id</p>
+
+  <h2>GET /api/comments</h2>
+  <p>Returns an array of comments</p>
+
+  <h2>PATCH /api/comments/:comment_id?votes="up"</h2>
+  <p>Returns a single comment, specified by a comment id, with an
+    incremented vote count</p>
+
+  <h2>PATCH /api/comments/:comment_id?votes="down"</h2>
+  <p>Returns a single comment, specified by a comment id, with an
+    decremented vote count</p>
+
+  <h2>DELETE /api/comments/:comment_id</h2>
+  <p>Deletes a single comment, specified by a comment id</p>
+
+  <h2>GET /api/users</h2>
+  <p>Returns an array of users</p>
+
+  <h2>GET /api/users/:username</h2>
+  <p>Returns an array of users, specified by a username</p>
+
 </body>
 
 </html>

@@ -15,7 +15,7 @@ mongoose
   })
   .catch();
 
-app.get("/", (req, res, next) => {
+app.get("/api", (req, res, next) => {
   res.sendFile(`${__dirname}/index.html`);
 });
 
