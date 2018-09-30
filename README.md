@@ -34,7 +34,7 @@ This project requires the following packages:
    npm install
    ```
 
-3. Run MongoDB:
+3. Run MongoDB in a separate terminal:
 
    ```
    mongod
