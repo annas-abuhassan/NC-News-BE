@@ -15,8 +15,8 @@ mongoose
   })
   .catch();
 
-app.get("/api", (req, res, next) => {
-  res.sendFile(`${__dirname}/index.html`);
+app.get("/", (req, res, next) => {
+  res.sendFile(`${__dirname}/views/index.html`);
 });
 
 app.use("/api", apiRouter);
