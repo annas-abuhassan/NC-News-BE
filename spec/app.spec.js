@@ -265,7 +265,7 @@ describe("/api", () => {
         });
     });
     describe("/:comment_id", () => {
-      it("PATCH returns with status code 200 and a comment with an increased vote count when the request query = 'up'", () => {
+      it.only("PATCH returns with status code 200 and a comment with an increased vote count when the request query = 'up'", () => {
         return request
           .patch(`/api/comments/${commentDoc[0]._id}?votes=up`)
           .expect(200)

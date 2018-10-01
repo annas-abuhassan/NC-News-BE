@@ -86,7 +86,7 @@ Tests have been created for each endpoint to check for both successful and unsuc
 You are able to test each endpoint locally using:
 
 ```
-npm run t
+npm t
 ```
 
 ## Deployment
