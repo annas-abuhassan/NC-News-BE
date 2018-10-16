@@ -1,3 +1,4 @@
+const cors = require("cors");
 const app = require("express")();
 const apiRouter = require("./routes/api");
 const mongoose = require("mongoose");
@@ -5,7 +6,7 @@ const bodyParser = require("body-parser");
 const { handle400, handle404, handle500 } = require("./utils");
 const { DB_URL } =
   process.env.NODE_ENV === "production" ? process.env : require("./config");
-
+app.use(cors());
 app.use(bodyParser.json());
 
 mongoose
