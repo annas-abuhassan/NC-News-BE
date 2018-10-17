@@ -1,4 +1,4 @@
-const { Article, Comment } = require("../models");
+const { Article, Comment, Topic } = require("../models");
 const { formatArticlesWithCommentCount, checkDoc } = require("../utils");
 
 const getArticles = (req, res, next) => {
@@ -49,13 +49,22 @@ const getArticlesByTopic = (req, res, next) => {
 
 const addArticleByTopic = (req, res, next) => {
   req.body.belongs_to = req.params.slug;
+
+  Topic.find({ slug: req.params.slug }).then(topicDoc => {
+    if (!topicDoc.length) {
+      console.log("adding the topic!");
+      Topic.create({ title: req.params.slug, slug: req.params.slug });
+    } else {
+      console.log("topic already exists");
+    }
+  });
+
   Article.create({ ...req.body, belongs_to: req.params.slug })
     .then(articleDoc => {
       const article = {
         ...articleDoc._doc,
         comment_count: 0
       };
-
       res.status(201).send({ article });
     })
     .catch(next);
