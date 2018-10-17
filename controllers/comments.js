@@ -36,11 +36,7 @@ const addCommentByArticleId = (req, res, next) => {
     .then(article => {
       checkDoc(article);
     })
-    .then(() =>
-      Comment.create(req.body)
-        .populate("created_by")
-        .populate("belongs_to")
-    )
+    .then(() => Comment.create(req.body))
     .then(comment => {
       res.status(201).send({ comment });
     })
