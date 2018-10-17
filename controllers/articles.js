@@ -52,10 +52,11 @@ const addArticleByTopic = (req, res, next) => {
 
   Topic.find({ slug: req.params.slug }).then(topicDoc => {
     if (!topicDoc.length) {
-      console.log("adding the topic!");
-      Topic.create({ title: req.params.slug, slug: req.params.slug });
-    } else {
-      console.log("topic already exists");
+      Topic.create({
+        title:
+          req.params.slug.charAt(0).toUpperCase() + req.params.slug.slice(1),
+        slug: req.params.slug
+      });
     }
   });
 
