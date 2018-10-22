@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Article } = require("../models");
 const { checkDoc } = require("../utils");
 
 const getUsers = (req, res, next) => {
@@ -7,13 +7,16 @@ const getUsers = (req, res, next) => {
   });
 };
 
-const getUserByUsername = (req, res, next) => {
-  User.findOne({ username: req.params.username })
-    .then(user => {
+const getUserByID = (req, res, next) => {
+  return Promise.all([
+    Article.find().populate("created_by"),
+    User.findOne({ _id: req.params._id })
+  ])
+    .then(([articles, user]) => {
       checkDoc(user);
       res.send({ user });
     })
     .catch(next);
 };
 
-module.exports = { getUsers, getUserByUsername };
+module.exports = { getUsers, getUserByID };

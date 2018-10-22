@@ -355,21 +355,29 @@ describe("/api", () => {
           expect(users[0].name).to.equal(userDoc[0].name);
         });
     });
-    describe("/:username", () => {
-      it("GET responds with status code 200 and a specific user", () => {
+    describe.only("/:_id", () => {
+      it("GET responds with status code 200 and a specific user for a given user ID", () => {
         return request
-          .get(`/api/users/${userDoc[0].username}`)
+          .get(`/api/users/${userDoc[0]._id}`)
           .expect(200)
           .then(({ body: { user } }) => {
             expect(user._id).to.equal(`${userDoc[0]._id}`);
           });
       });
-      it("GET returns a 404 for a username that does not exist", () => {
+      it("GET returns a 404 for an ID that does not exist", () => {
         return request
-          .get(`/api/users/lara`)
+          .get(`/api/users/5bacc325b0223a56cbd5daa1`)
           .expect(404)
           .then(({ body: { msg } }) => {
             expect(msg).to.equal("ID does not exist");
+          });
+      });
+      it("GET returns a 400 for an invalid ID", () => {
+        return request
+          .get(`/api/users/lara`)
+          .expect(400)
+          .then(({ body: { msg } }) => {
+            expect(msg).to.equal("Bad request");
           });
       });
     });
