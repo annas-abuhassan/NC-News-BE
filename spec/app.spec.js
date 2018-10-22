@@ -350,6 +350,8 @@ describe("/api", () => {
             "username",
             "name",
             "avatar_url",
+            "articles",
+            "comments",
             "__v"
           );
           expect(users[0].name).to.equal(userDoc[0].name);
