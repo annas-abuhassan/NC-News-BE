@@ -350,19 +350,26 @@ describe("/api", () => {
             "username",
             "name",
             "avatar_url",
-            "articles",
-            "comments",
             "__v"
           );
           expect(users[0].name).to.equal(userDoc[0].name);
         });
     });
-    describe.only("/:_id", () => {
+    describe("/:_id", () => {
       it("GET responds with status code 200 and a specific user for a given user ID", () => {
         return request
           .get(`/api/users/${userDoc[0]._id}`)
           .expect(200)
           .then(({ body: { user } }) => {
+            expect(user).to.have.keys(
+              "_id",
+              "username",
+              "name",
+              "avatar_url",
+              "articles",
+              "comments",
+              "__v"
+            );
             expect(user._id).to.equal(`${userDoc[0]._id}`);
           });
       });

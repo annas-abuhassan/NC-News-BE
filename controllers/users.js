@@ -10,8 +10,8 @@ const getUsers = (req, res, next) => {
 const getUserByID = (req, res, next) => {
   const { _id } = req.params;
   return Promise.all([
-    Comment.find({ created_by: _id }),
-    Article.find({ created_by: _id }),
+    Comment.find({ created_by: _id }).populate("created_by"),
+    Article.find({ created_by: _id }).populate("created_by"),
     User.findOne({ _id: _id }).lean()
   ])
     .then(([comments, articles, user]) => {
