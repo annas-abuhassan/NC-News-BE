@@ -1,9 +1,10 @@
-const { Article, Comment, Topic } = require("../models");
-const { formatArticlesWithCommentCount, checkDoc } = require("../utils");
+const { Article, Comment, Topic } = require('../models');
+const { formatArticlesWithCommentCount, checkDoc } = require('../utils');
 
 const getArticles = (req, res, next) => {
+  console.log('test');
   Article.find()
-    .populate("created_by")
+    .populate('created_by')
     .lean()
     .then(articleDocs => {
       return Promise.all([articleDocs, Comment.find()]);
@@ -18,7 +19,7 @@ const getArticles = (req, res, next) => {
 const getArticleById = (req, res, next) => {
   return Promise.all([
     Article.findById(req.params.article_id)
-      .populate("created_by")
+      .populate('created_by')
       .lean(),
     Comment.count({ belongs_to: req.params.article_id })
   ])
@@ -35,7 +36,7 @@ const getArticleById = (req, res, next) => {
 
 const getArticlesByTopic = (req, res, next) => {
   Article.find({ belongs_to: req.params.slug })
-    .populate("created_by")
+    .populate('created_by')
     .lean()
     .then(articleDocs => {
       return Promise.all([articleDocs, Comment.find()]);
@@ -73,7 +74,7 @@ const addArticleByTopic = (req, res, next) => {
 
 const makeArticleVote = (req, res, next) => {
   const voteInc =
-    req.query.votes === "up" ? 1 : req.query.votes === "down" ? -1 : 0;
+    req.query.votes === 'up' ? 1 : req.query.votes === 'down' ? -1 : 0;
   Article.findByIdAndUpdate(
     { _id: req.params.article_id },
     {
