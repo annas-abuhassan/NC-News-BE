@@ -15,6 +15,7 @@
     "body-parser": "^1.15.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "express-winston": "^3.0.1",
     "mongoose": "^5.2.17",
     "save": "^2.3.3",
     "winston": "^3.1.0"
