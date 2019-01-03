@@ -11,7 +11,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose
-  .connect(DB_URL)
+  .connect(
+    DB_URL,
+    { useNewUrlParser: true }
+  )
   .then(() => {
     log.info('connected to the database');
   })
