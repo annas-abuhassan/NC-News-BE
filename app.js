@@ -1,5 +1,5 @@
 const cors = require('cors');
-const { log, httpLog } = require('./logger.js');
+const { log } = require('./logger.js');
 const app = require('express')();
 const apiRouter = require('./routes/api');
 const mongoose = require('mongoose');
@@ -24,7 +24,6 @@ app.get('/', (req, res, next) => {
   res.sendFile(`${__dirname}/views/index.html`);
 });
 
-app.use(httpLog);
 app.use('/api', apiRouter);
 
 app.use('/*', (req, res, next) => {
