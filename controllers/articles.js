@@ -1,5 +1,6 @@
 const { Article, Comment, Topic } = require('../models');
 const { formatArticlesWithCommentCount, checkDoc } = require('../utils');
+const { log } = require('../logger.js');
 
 const getArticles = (req, res, next) => {
   Article.find()
@@ -11,6 +12,11 @@ const getArticles = (req, res, next) => {
     .then(([articleDocs, commentDocs]) => {
       const articles = formatArticlesWithCommentCount(articleDocs, commentDocs);
       res.send({ articles });
+      log.debug(
+        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
+          res.statusCode
+        }'`
+      );
     })
     .catch(next);
 };
@@ -29,6 +35,11 @@ const getArticleById = (req, res, next) => {
         comment_count: commentCount
       };
       res.send({ article });
+      log.debug(
+        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
+          res.statusCode
+        }'`
+      );
     })
     .catch(next);
 };
@@ -43,6 +54,11 @@ const getArticlesByTopic = (req, res, next) => {
     .then(([articleDocs, commentDocs]) => {
       const articles = formatArticlesWithCommentCount(articleDocs, commentDocs);
       res.send({ articles });
+      log.debug(
+        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
+          res.statusCode
+        }'`
+      );
     })
     .catch(next);
 };
@@ -67,6 +83,11 @@ const addArticleByTopic = (req, res, next) => {
         comment_count: 0
       };
       res.status(201).send({ article });
+      log.debug(
+        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
+          res.statusCode
+        }' BODY: ${JSON.stringify(req.body)}`
+      );
     })
     .catch(next);
 };
@@ -84,6 +105,11 @@ const makeArticleVote = (req, res, next) => {
     .then(article => {
       checkDoc(article);
       res.send({ article });
+      log.debug(
+        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
+          res.statusCode
+        }' QUERY: ${JSON.stringify(req.query)}`
+      );
     })
     .catch(next);
 };
