@@ -1,3 +1,5 @@
+const { log, httpLog, errorLog } = require('../logger.js');
+
 const formatArticles = (userDoc, articleData) => {
   return articleData.map(article => {
     return {
@@ -36,25 +38,42 @@ const formatArticlesWithCommentCount = (articleDocs, commentDocs) => {
 };
 
 const checkDoc = id => {
-  if (!id) throw { status: 404, msg: "ID does not exist" };
+  if (!id) throw { status: 404, msg: 'ID does not exist' };
 };
 
 const handle400 = (err, req, res, next) => {
   if (
-    err.name === "ValidationError" ||
-    err.name === "CastError" ||
-    err.name === "Error"
-  )
-    res.status(400).send({ name: err.name, msg: err.msg || "Bad request" });
-  next(err);
+    err.name === 'ValidationError' ||
+    err.name === 'CastError' ||
+    err.name === 'Error'
+  ) {
+    res.status(400).send({ name: err.name, msg: err.msg || 'Bad request' });
+    log.error(`"Method: '${req.method}' URL: '${req.url}' STATUS CODE: '${
+      res.statusCode
+    }' BODY: ${JSON.stringify(req.body)}
+      ${err.name ? `ERROR: ${err.name}` : 'N/A'}
+      MESSAGE: ${err.msg ? `${err.msg}` : 'Bad request'}`);
+  } else next(err);
 };
 
 const handle404 = (err, req, res, next) => {
-  if (err.status === 404) res.status(404).send({ msg: err.msg || "Not found" });
-  else next(err);
+  if (err.status === 404) {
+    res.status(404).send({ msg: err.msg || 'Not found' });
+    log.error(
+      `"Method: '${req.method}' URL: '${req.url}' STATUS CODE: '${
+        res.statusCode
+      }' BODY: ${JSON.stringify(req.body)} MESSAGE: ${err.msg || 'Not found'}`
+    );
+  } else next(err);
 };
+
 const handle500 = (err, req, res, next) => {
-  res.status(500).send({ msg: "Internal Server Error" });
+  res.status(500).send({ msg: 'Internal Server Error' });
+  log.error(
+    `"Method: '${req.method}' URL: '${req.url}' STATUS CODE: '${
+      res.statusCode
+    }' BODY: ${JSON.stringify(req.body)} MESSAGE: ${err.msg || 'Bad request'}`
+  );
 };
 
 module.exports = {
