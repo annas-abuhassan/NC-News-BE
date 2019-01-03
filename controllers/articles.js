@@ -2,7 +2,6 @@ const { Article, Comment, Topic } = require('../models');
 const { formatArticlesWithCommentCount, checkDoc } = require('../utils');
 
 const getArticles = (req, res, next) => {
-  console.log('test');
   Article.find()
     .populate('created_by')
     .lean()
