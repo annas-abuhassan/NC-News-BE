@@ -16,7 +16,7 @@ mongoose
     { useNewUrlParser: true }
   )
   .then(() => {
-    log.info('connected to the database');
+    log.debug('connected to the database');
   })
   .catch();
 
