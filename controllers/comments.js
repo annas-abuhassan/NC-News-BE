@@ -1,5 +1,5 @@
 const { Comment, Article } = require('../models');
-const { checkDoc } = require('../utils');
+const { checkDoc, generalLog } = require('../utils');
 const { log } = require('../logger.js');
 
 const getComments = (req, res, next) => {
@@ -8,11 +8,7 @@ const getComments = (req, res, next) => {
     .populate('belongs_to')
     .then(comments => {
       res.send({ comments });
-      log.debug(
-        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
-          res.statusCode
-        }'`
-      );
+      generalLog(req, res);
     })
     .catch(next);
 };
@@ -31,11 +27,7 @@ const getCommentsByArticleId = (req, res, next) => {
       if (comments.length === 0)
         throw { status: 404, msg: 'No comments for this article' };
       res.send({ comments });
-      log.debug(
-        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
-          res.statusCode
-        }'`
-      );
+      generalLog(req, res);
     })
     .catch(next);
 };
@@ -50,11 +42,7 @@ const addCommentByArticleId = (req, res, next) => {
     .then(() => Comment.create(req.body))
     .then(comment => {
       res.status(201).send({ comment });
-      log.debug(
-        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
-          res.statusCode
-        }' BODY: ${JSON.stringify(req.body)}`
-      );
+      generalLog(req, res, 'body');
     })
     .catch(next);
 };
@@ -72,26 +60,17 @@ const makeCommentVote = (req, res, next) => {
     .then(comment => {
       checkDoc(comment);
       res.send({ comment });
-      log.debug(
-        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
-          res.statusCode
-        }' QUERY: ${JSON.stringify(req.query)}`
-      );
+      generalLog(req, res, 'query');
     })
     .catch(next);
 };
 
 const deleteCommentById = (req, res, next) => {
-  console.log('HIYA DELETING COMMENT');
   Comment.findByIdAndRemove({ _id: req.params.comment_id })
     .then(comment => {
       checkDoc(comment);
       res.send({ comment });
-      log.debug(
-        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
-          res.statusCode
-        }'`
-      );
+      generalLog(req, res);
     })
     .catch(next);
 };

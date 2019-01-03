@@ -1,4 +1,4 @@
-const { log, httpLog, errorLog } = require('../logger.js');
+const log = require('../logger.js');
 
 const formatArticles = (userDoc, articleData) => {
   return articleData.map(article => {
@@ -76,6 +76,16 @@ const handle500 = (err, req, res, next) => {
   );
 };
 
+const generalLog = (req, res, custom) => {
+  log.debug(
+    `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
+      res.statusCode
+    }' ${
+      custom ? `${custom.toUpperCase()}: ${JSON.stringify(req[custom])}` : ''
+    }`
+  );
+};
+
 module.exports = {
   formatArticles,
   formatComments,
@@ -83,5 +93,6 @@ module.exports = {
   checkDoc,
   handle400,
   handle404,
-  handle500
+  handle500,
+  generalLog
 };

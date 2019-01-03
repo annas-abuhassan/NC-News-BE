@@ -1,15 +1,10 @@
 const { User, Article, Comment } = require('../models');
-const { checkDoc } = require('../utils');
-const { log } = require('../logger.js');
+const { checkDoc, generalLog } = require('../utils');
 
 const getUsers = (req, res, next) => {
   User.find().then(users => {
     res.send({ users });
-    log.debug(
-      `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
-        res.statusCode
-      }'`
-    );
+    generalLog(req, res);
   });
 };
 
@@ -24,11 +19,7 @@ const getUserByID = (req, res, next) => {
       checkDoc(user);
       user = { ...user, articles, comments };
       res.send({ user });
-      log.debug(
-        `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
-          res.statusCode
-        }'`
-      );
+      generalLog(req, res);
     })
     .catch(next);
 };

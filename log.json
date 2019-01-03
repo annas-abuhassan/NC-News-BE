@@ -1,0 +1,613 @@
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:20:32"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:20:32"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:20:32"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:20:33"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e6e927b195b77f5927c19\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e6e927b195b77f5927c19\"}","level":"debug","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e6e927b195b77f5927c2a/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6e927b195b77f5927c2a\",\"belongs_to\":\"5c2e6e927b195b77f5927c2a\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6e927b195b77f5927c3b\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e6e927b195b77f5927c4b\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:20:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:20:35"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:35"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:20:35"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:20:35"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:20:35"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:21:11"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:21:11"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:13"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:13"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:13"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e6eb9950860783f5e5920\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e6eb9950860783f5e5920\"}","level":"debug","timestamp":"2019-01-03 20:21:13"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e6eb9950860783f5e5931/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6eb9950860783f5e5931\",\"belongs_to\":\"5c2e6eb9950860783f5e5931\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:13"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6eb9950860783f5e5942\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:13"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e6eb9950860783f5e5952\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:13"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:14"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:15"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:21:34"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:21:34"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:21:34"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:35"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e6ed01dfe0b78858b6d4e\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e6ed01dfe0b78858b6d4e\"}","level":"debug","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e6ed01dfe0b78858b6d5f/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6ed01dfe0b78858b6d5f\",\"belongs_to\":\"5c2e6ed01dfe0b78858b6d5f\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6ed01dfe0b78858b6d70\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e6ed01dfe0b78858b6d80\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:37"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:21:37"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:37"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:21:59"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:21:59"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:21:59"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:21:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e6ee9d0933178cadf1eb2\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e6ee9d0933178cadf1eb2\"}","level":"debug","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e6ee9d0933178cadf1ec3/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6ee9d0933178cadf1ec3\",\"belongs_to\":\"5c2e6ee9d0933178cadf1ec3\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6ee9d0933178cadf1ed4\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e6ee9d0933178cadf1ee4\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:01"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:02"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:02"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:02"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:02"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:02"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:22:27"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:22:27"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:22:27"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:27"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:28"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:28"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:22:28"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:22:28"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:22:28"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:28"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:29"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:29"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:29"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e6f051f9e437913db21da\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e6f051f9e437913db21da\"}","level":"debug","timestamp":"2019-01-03 20:22:29"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e6f051f9e437913db21eb/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6f051f9e437913db21eb\",\"belongs_to\":\"5c2e6f051f9e437913db21eb\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:29"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6f051f9e437913db21fc\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:29"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e6f051f9e437913db220c\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:29"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:22:30"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:22:30"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:22:30"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:30"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:30"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:30"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:30"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:22:31"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:22:31"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:23:44"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:23:44"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:23:44"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:44"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:44"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:23:45"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:23:45"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:23:45"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:23:45"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:45"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:23:45"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:45"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:23:46"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e6f5217e12a79711d4f45\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e6f5217e12a79711d4f45\"}","level":"debug","timestamp":"2019-01-03 20:23:46"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e6f5217e12a79711d4f56/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6f5217e12a79711d4f56\",\"belongs_to\":\"5c2e6f5217e12a79711d4f56\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:46"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6f5217e12a79711d4f67\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:46"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e6f5217e12a79711d4f77\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:23:46"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:23:46"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:23:46"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:23:47"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:47"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:23:47"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:47"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:23:47"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:23:48"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:23:48"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:25:50"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:51"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:25:51"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:51"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:51"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:51"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:51"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:25:51"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:25:52"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:25:52"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:25:52"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:52"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:25:52"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:52"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:52"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:25:53"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e6fd1985cfe7a26423774\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e6fd1985cfe7a26423774\"}","level":"debug","timestamp":"2019-01-03 20:25:53"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e6fd1985cfe7a26423785/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6fd1985cfe7a26423785\",\"belongs_to\":\"5c2e6fd1985cfe7a26423785\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:53"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e6fd1985cfe7a26423796\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:53"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e6fd1985cfe7a264237a6\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:25:53"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:53"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:25:53"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:25:54"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:55"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:25:55"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:25:55"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:25:55"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:27:08"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:09"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:27:09"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:09"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:09"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:09"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:10"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:27:10"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:27:10"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:27:10"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:27:10"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:10"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:27:10"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:11"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:11"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:27:11"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e701fd295fd7aa2766e9f\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e701fd295fd7aa2766e9f\"}","level":"debug","timestamp":"2019-01-03 20:27:11"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e701fd295fd7aa2766eb0/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e701fd295fd7aa2766eb0\",\"belongs_to\":\"5c2e701fd295fd7aa2766eb0\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:11"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e701fd295fd7aa2766ec1\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:11"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e7020d295fd7aa2766ed1\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:27:12"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:27:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:27:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:27:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:27:13"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:13"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:13"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:13"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:27:13"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:13"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:27:13"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:27:14"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:27:14"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:28:04"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:28:04"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:28:05"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:28:05"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:28:05"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:28:05"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:28:05"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:28:06"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200'","level":"debug","timestamp":"2019-01-03 20:28:06"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:28:06"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:28:06"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:37:02"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:37:02"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:37:02"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:37:02"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:37:02"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:37:03"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:37:03"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:37:03"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:37:03"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:37:03"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:37:04"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:37:23"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:37:23"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:37:24"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:37:24"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:37:24"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:37:24"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:37:25"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:37:25"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:37:25"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:37:25"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:37:25"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:38:06"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:38:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:38:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:38:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:38:08"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:38:08"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:38:08"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:38:08"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:38:08"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:38:09"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:38:09"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:38:33"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:38:33"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:38:33"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:38:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:38:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:38:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:38:35"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:38:35"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:38:36"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:38:36"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:38:36"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:39:14"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:39:15"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:39:15"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:39:16"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:39:17"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:39:17"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:39:18"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:39:18"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:39:18"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:39:18"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:39:19"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:39:35"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:39:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: undefined","level":"debug","timestamp":"2019-01-03 20:39:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: undefined","level":"debug","timestamp":"2019-01-03 20:39:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: undefined","level":"debug","timestamp":"2019-01-03 20:39:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:39:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:39:36"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:39:36"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:39:36"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:39:36"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:39:36"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:40:11"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:11"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: undefined","level":"debug","timestamp":"2019-01-03 20:40:11"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: undefined","level":"debug","timestamp":"2019-01-03 20:40:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: undefined","level":"debug","timestamp":"2019-01-03 20:40:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:40:12"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:40:12"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:12"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:12"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:40:12"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:40:12"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:40:37"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:40:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:40:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:40:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:40:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:40:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:38"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:38"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:40:38"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:40:38"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:40:52"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:40:53"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:40:53"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:41:19"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' query: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:41:20"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:41:20"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:41:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:41:38"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:41:38"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:42:05"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:05"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:42:05"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:05"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:42:06"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e739f9848cf019947db5b\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e739f9848cf019947db5b\"}","level":"debug","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e739f9848cf019947db6c/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e739f9848cf019947db6c\",\"belongs_to\":\"5c2e739f9848cf019947db6c\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e739f9848cf019947db7d\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e739f9848cf019947db8d\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:42:07"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:08"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:42:08"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:42:08"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:42:08"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:43:05"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:06"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:06"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:06"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:06"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e73db296152020c68b77f\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e73db296152020c68b77f\"}","level":"debug","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e73db296152020c68b790/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e73db296152020c68b790\",\"belongs_to\":\"5c2e73db296152020c68b790\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e73db296152020c68b7a1\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e73db296152020c68b7b1\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:43:07"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:08"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:08"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:43:33"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:33"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:33"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:34"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e73f7808ae7026beb66c8\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e73f7808ae7026beb66c8\"}","level":"debug","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e73f7808ae7026beb66d9/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e73f7808ae7026beb66d9\",\"belongs_to\":\"5c2e73f7808ae7026beb66d9\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e73f7808ae7026beb66ea\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e73f7808ae7026beb66fa\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:35"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:36"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:36"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:36"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:36"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:36"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:36"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:36"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:36"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:43:48"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:48"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:48"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:48"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:48"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:48"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e74057edbf002ae11061c\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e74057edbf002ae11061c\"}","level":"debug","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e74057edbf002ae11062d/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74057edbf002ae11062d\",\"belongs_to\":\"5c2e74057edbf002ae11062d\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:49"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74067edbf002ae11063e\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e74067edbf002ae11064e\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:43:50"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:43:51"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:43:51"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:44:58"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:44:58"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:44:58"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:44:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e744cbcf9920308168670\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e744cbcf9920308168670\"}","level":"debug","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e744cbcf9920308168681/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e744cbcf9920308168681\",\"belongs_to\":\"5c2e744cbcf9920308168681\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e744cbcf9920308168692\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e744cbcf99203081686a2\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:45:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:01"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:01"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:35"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e7470d8691d035102e35e\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e7470d8691d035102e35e\"}","level":"debug","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e7470d8691d035102e36f/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e7470d8691d035102e36f\",\"belongs_to\":\"5c2e7470d8691d035102e36f\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e7470d8691d035102e380\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e7470d8691d035102e390\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:36"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:45:37"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:45:37"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:46:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:46:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:46:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:46:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:46:00"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e74894ac98a039c8cb529\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e74894ac98a039c8cb529\"}","level":"debug","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e74894ac98a039c8cb53a/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74894ac98a039c8cb53a\",\"belongs_to\":\"5c2e74894ac98a039c8cb53a\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74894ac98a039c8cb54b\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:46:01"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e74894ac98a039c8cb55b\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:46:01"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:46:59"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:00"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e74c40e7971040040529c\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e74c40e7971040040529c\"}","level":"debug","timestamp":"2019-01-03 20:47:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e74c40e797104004052ad/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74c40e797104004052ad\",\"belongs_to\":\"5c2e74c40e797104004052ad\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74c40e797104004052be\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:00"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e74c40e797104004052ce\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:00"}
+{"message":"connected to the database","level":"debug","timestamp":"2019-01-03 20:47:36"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:36"}
+{"message":"\"Method: 'GET' URL: '/api/topics' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:36"}
+{"message":"\"Method: 'POST' URL: '/api/topics' STATUS CODE: '201' BODY: {\"title\":\"hello i am a new article\",\"created_by\":\"5bacb626c997a64582c568e9\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}","level":"debug","timestamp":"2019-01-03 20:47:36"}
+{"message":"\"Method: 'POST' URL: '/api/topics/cats/articles' STATUS CODE: '400' BODY: {\"title\":\"hello i am a new article\",\"body\":\"hello article, nice to meet you\",\"belongs_to\":\"cats\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:36"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:36"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/bazooka?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'PATCH' URL: '/api/articles/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'GET' URL: '/api/articles' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'GET' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'GET' URL: '/api/articles/5bacc325b0225a56cbd5daa1/comments' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'POST' URL: '/api/articles' STATUS CODE: '201' BODY: {\"created_by\":\"5c2e74e9bd982d04592ee859\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5c2e74e9bd982d04592ee859\"}","level":"debug","timestamp":"2019-01-03 20:47:37"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5c2e74eabd982d04592ee86a/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74eabd982d04592ee86a\",\"belongs_to\":\"5c2e74eabd982d04592ee86a\"}\n      ERROR: ValidationError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'POST' URL: '/api/articles/annas/comments' STATUS CODE: '400' BODY: {\"created_by\":\"5c2e74eabd982d04592ee87b\",\"body\":\"This is a new comment!\",\"belongs_to\":\"annas\"}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'POST' URL: '/api/articles/5bacc325b0225a56cbd6daa1/comments' STATUS CODE: '404' BODY: {\"created_by\":\"5c2e74eabd982d04592ee88b\",\"body\":\"This is a new comment!\",\"belongs_to\":\"5bacc325b0225a56cbd6daa1\"} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"up\"}","level":"debug","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"down\"}","level":"debug","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments' STATUS CODE: '200' QUERY: {\"votes\":\"apples\"}","level":"debug","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/annas?votes=up' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'PATCH' URL: '/api/comments/5bacc325b0223a56cbd5daa1?votes=up' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'GET' URL: '/api/comments' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/annas' STATUS CODE: '400' BODY: {}\n      ERROR: Error\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:38"}
+{"message":"\"Method: 'DELETE' URL: '/api/comments/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:39"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:39"}
+{"message":"\"Method: 'GET' URL: '/api/users' STATUS CODE: '200' ","level":"debug","timestamp":"2019-01-03 20:47:39"}
+{"message":"\"Method: 'GET' URL: '/api/users/5bacc325b0223a56cbd5daa1' STATUS CODE: '404' BODY: {} MESSAGE: ID does not exist","level":"error","timestamp":"2019-01-03 20:47:39"}
+{"message":"\"Method: 'GET' URL: '/api/users/lara' STATUS CODE: '400' BODY: {}\n      ERROR: CastError\n      MESSAGE: Bad request","level":"error","timestamp":"2019-01-03 20:47:39"}
