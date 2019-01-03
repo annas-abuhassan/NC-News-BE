@@ -1,7 +1,7 @@
 const { createLogger, format, transports } = require('winston');
 
 const log = createLogger({
-  level: process.env.LOGGING_LEVEL || 'debug',
+  level: process.env.LOGGING_LEVEL || 'info',
   format: format.combine(
     format.timestamp({
       format: 'YYYY-MM-DD HH:mm:ss'
@@ -10,11 +10,10 @@ const log = createLogger({
   ),
   transports: [
     new transports.Console({
-      level: 'debug',
       format: format.combine(
         format.colorize(),
         format.printf(
-          info => `${info.timestamp} ${info.level}: ${info.message}`
+          debug => `${debug.timestamp} ${debug.level}: ${debug.message}`
         )
       )
     }),
