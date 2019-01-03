@@ -32,3 +32,15 @@ Establish two different logging levels - make sure correct logging level is set 
 I don't forsee too many challenges so far, but my biggest worry is dynamically changing logging level when live... work this out later.  
 Doesn't look too difficult to implement two different logging levels.  
 Can use process.env to change the logging levels, not sure how i can do this when live yet (and if this is something that should even be done)
+
+### Updates
+
+16:20 - tried really hard to use a middleware wrapper for express / winston so that I can just log all requests / responses in a couple of lines.  
+Can't for the life of me work out why this isn't working, going to have to do this in a less DRY method but should still be ok...
+This is also really annoying because the expressWinston package also measured response time which is obviously a really good metric to log.. grrr.
+
+Might try to come back to this.
+
+Overall though, i can log to file and console, under two different logging levels, tomorrow will be spent getting this tied to graylog / other third parties.
+
+17:26 - ok all the logging is in place, its a bit wet atm so make DRY tomorrow..
