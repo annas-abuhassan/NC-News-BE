@@ -1,4 +1,6 @@
 const { createLogger, format, transports } = require('winston');
+const CloudWatchTransport = require('winston-aws-cloudwatch');
+const awsConfig = require('./config');
 
 const log = createLogger({
   level: process.env.LOGGING_LEVEL || 'debug',
@@ -17,7 +19,18 @@ const log = createLogger({
         )
       )
     }),
-    new transports.File({ filename: `${__dirname}/log.json` })
+    new CloudWatchTransport({
+      logGroupName: 'northcoders-news',
+      logStreamName: 'test-stream',
+      createLogGroup: true,
+      createLogStream: true,
+      submissionInterval: 2000,
+      submissionRetryCount: 1,
+      batchSize: 20,
+      ...awsConfig,
+      formatLog: item =>
+        `${item.level}: ${item.message} ${JSON.stringify(item.meta)}`
+    })
   ]
 });
 module.exports = log;
