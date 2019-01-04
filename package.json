@@ -18,7 +18,8 @@
     "express-winston": "^3.0.1",
     "mongoose": "^5.2.17",
     "save": "^2.3.3",
-    "winston": "^3.1.0"
+    "winston": "^3.1.0",
+    "winston-aws-cloudwatch": "^3.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
