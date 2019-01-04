@@ -1,5 +1,6 @@
 process.env.NODE_ENV = 'test';
 const { expect } = require('chai');
+const { password } = require('../config/logger.js');
 const app = require('../app');
 const request = require('supertest')(app);
 const mongoose = require('mongoose');
@@ -390,6 +391,51 @@ describe('/api', () => {
             expect(msg).to.equal('Bad request');
           });
       });
+    });
+  });
+  describe('/logger', () => {
+    it('GET returns with status code 200 and the current logging level', () => {
+      return request
+        .get('/api/logger')
+        .expect(200)
+        .then(({ body: { msg } }) => {
+          expect(msg).to.equal('The current log level is debug');
+        });
+    });
+    it('PATCH returns with status code 200 and the new logging level', () => {
+      const newLevel = 'error';
+      return request
+        .patch(`/api/logger?level=${newLevel}&password=${password}`)
+        .expect(200)
+        .then(({ body: { msg, level } }) => {
+          expect(level).to.equal(newLevel);
+          expect(msg).to.equal(
+            `Previous log level: debug. Log level now set to: ${level}`
+          );
+        });
+    });
+    it('PATCH returns with status code 400 and an appropriate error message when the password is incorrect', () => {
+      const goodLevel = 'error';
+      const badPass = 'iamwrong';
+      return request
+        .patch(`/api/logger?level=${goodLevel}&password=${badPass}`)
+        .expect(400)
+        .then(({ body: { msg } }) => {
+          expect(msg).to.equal(
+            'Incorrect password. Please contact your admin for this information.'
+          );
+        });
+    });
+    it('PATCH returns with status code 400 and an appropriate error message when the logging level is invalid', () => {
+      const badLevel = 'verbose';
+      return request
+        .patch(`/api/logger?level=${badLevel}&password=${password}`)
+        .expect(400)
+        .then(({ body: { msg } }) => {
+          expect(msg).to.equal(
+            `${badLevel} is not a valid logging level. Please select either 'debug' or 'error`
+          );
+        });
     });
   });
 });
