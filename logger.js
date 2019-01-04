@@ -28,8 +28,7 @@ const log = createLogger({
       submissionRetryCount: 1,
       batchSize: 20,
       ...awsConfig,
-      formatLog: item =>
-        `${item.level}: ${item.message} ${JSON.stringify(item.meta)}`
+      formatLog: item => `${item.level}: ${item.message}`
     })
   ]
 });
