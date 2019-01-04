@@ -44,3 +44,13 @@ Might try to come back to this.
 Overall though, i can log to file and console, under two different logging levels, tomorrow will be spent getting this tied to graylog / other third parties.
 
 17:26 - ok all the logging is in place, its a bit wet atm so make DRY tomorrow..
+21:12 - decided to refactor tonight, everything is looking a lot nicer now, i think its all O.K, still a bit miffed that I couldn't work out expressWinston..
+Tomorrow will be a hopefully smooth day of getting the logs sent to a third party...
+
+04/01/2019
+
+Shower thoughts...
+I think i saw in the winston docs that I can change the level of logging whilst the app is running.  
+So maybe i can create another endpoint that triggers the change of the debugging level, maybe associate this with a password of some sort...
+
+Do the above first, then work out how to send logs to third party
