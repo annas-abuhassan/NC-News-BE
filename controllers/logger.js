@@ -4,7 +4,7 @@ const { password } = require('../config/logger.js');
 
 const getLogLevel = (req, res, next) => {
   generalLog(req, res);
-  res.send(`The current log level is ${log.level}`);
+  res.send({ msg: `The current log level is ${log.level}` });
 };
 
 const updateLogLevel = (req, res, next) => {
@@ -27,25 +27,24 @@ const updateLogLevel = (req, res, next) => {
         log.level
       }`;
 
-      res.send(updateMessage);
+      res.send({ level: log.level, msg: updateMessage });
       log.debug(updateMessage);
     } else {
-      res
-        .status(400)
-        .send(
-          `${
-            req.query.level
-          } is not a valid logging level. Please select either 'debug' or 'error`
-        );
+      res.status(400).send({
+        msg: `${
+          req.query.level
+        } is not a valid logging level. Please select either 'debug' or 'error`
+      });
 
       log.error(`Invalid logging level used: ${req.query.level}`);
     }
   } else {
     res
       .status(400)
-      .send(
-        'Incorrect password. Please contact your admin for this information.'
-      );
+      .send({
+        msg:
+          'Incorrect password. Please contact your admin for this information.'
+      });
     log.error(`Invalid password used: ${req.query.password}`);
   }
 };
