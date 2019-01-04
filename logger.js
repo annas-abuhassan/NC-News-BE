@@ -1,6 +1,6 @@
 const { createLogger, format, transports } = require('winston');
 const CloudWatchTransport = require('winston-aws-cloudwatch');
-const awsConfig = require('./config');
+const awsConfig = require('./config/logger.js');
 
 const log = createLogger({
   level: process.env.LOGGING_LEVEL || 'debug',
