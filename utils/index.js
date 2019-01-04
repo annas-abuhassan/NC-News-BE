@@ -65,16 +65,18 @@ const handle500 = (err, req, res, next) => {
 };
 
 const errorLog = (req, res, err) => {
-  log.error(`"Method: '${req.method}' URL: '${req.url}' STATUS CODE: '${
-    res.statusCode
-  }' BODY: ${JSON.stringify(req.body)}
-      ERROR: ${err.name ? `${err.name}` : '404 Not Found'}
-      MESSAGE: ${err.msg ? `${err.msg}` : 'Bad request'}`);
+  log.error(
+    `"METHOD: '${req.method}' URL: '${req.url}' STATUS CODE: '${
+      res.statusCode
+    }' BODY: ${JSON.stringify(req.body)} ERROR: ${
+      err.name ? `${err.name}` : '404 Not Found'
+    } MESSAGE: ${err.msg ? `${err.msg}` : 'Bad Request'}`
+  );
 };
 
 const generalLog = (req, res, custom) => {
   log.debug(
-    `"Method: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
+    `"METHOD: '${req.method}' URL: '${req.baseUrl}' STATUS CODE: '${
       res.statusCode
     }' ${
       custom ? `${custom.toUpperCase()}: ${JSON.stringify(req[custom])}` : ''
