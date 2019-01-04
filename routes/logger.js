@@ -1,7 +1,7 @@
 const loggerRouter = require('express').Router();
-const { getLogs, updateLogLevel } = require('../controllers/logger');
+const { getLogLevel, updateLogLevel } = require('../controllers/logger');
 
-loggerRouter.get('/', getLogs);
-loggerRouter.route('/loglevel').patch(updateLogLevel);
+loggerRouter.get('/', getLogLevel);
+loggerRouter.patch('/', updateLogLevel);
 
 module.exports = loggerRouter;
