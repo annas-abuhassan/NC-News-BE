@@ -4,6 +4,7 @@ const awsConfig = require('./config/logger.js');
 
 const log = createLogger({
   level: process.env.LOGGING_LEVEL || 'debug',
+  silent: process.env.NODE_ENV === 'test' ? true : false,
   format: format.combine(
     format.timestamp({
       format: 'YYYY-MM-DD HH:mm:ss'
