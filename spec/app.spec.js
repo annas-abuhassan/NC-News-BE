@@ -329,7 +329,7 @@ describe('/api', () => {
             expect(msg).to.equal('Bad request');
           });
       });
-      it('DELETE returns with status code 400 for a comment id that does not exist', () => {
+      it('DELETE returns with status code 404 for a comment id that does not exist', () => {
         return request
           .delete(`/api/comments/5bacc325b0223a56cbd5daa1`)
           .expect(404)
