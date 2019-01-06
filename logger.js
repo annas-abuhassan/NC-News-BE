@@ -1,7 +1,7 @@
 const { createLogger, format, transports } = require('winston');
 const CloudWatchTransport = require('winston-aws-cloudwatch');
-const { accessKeyId, secretAccessKey, region } =
-  process.env.NODE_ENV === 'production' ? process.env : require('./config'); // Comment this out if you don't want to setup AWS
+// const { accessKeyId, secretAccessKey, region } =
+//   process.env.NODE_ENV === 'production' ? process.env : require('./config'); // Comment this out if you don't want to setup AWS
 
 const log = createLogger({
   level: process.env.LOGGING_LEVEL || 'debug',
@@ -20,23 +20,23 @@ const log = createLogger({
           debug => `${debug.timestamp} ${debug.level}: ${debug.message}`
         )
       )
-    }),
-    // Comment out this Transport instance if you don't want to setup AWS
-    new CloudWatchTransport({
-      logGroupName: 'northcoders-news',
-      logStreamName: 'test-stream',
-      createLogGroup: true,
-      createLogStream: true,
-      submissionInterval: 2000,
-      submissionRetryCount: 1,
-      batchSize: 20,
-      awsConfig: {
-        accessKeyId,
-        secretAccessKey,
-        region
-      },
-      formatLog: item => `${item.level}: ${item.message}`
     })
+    // Comment out this Transport instance if you don't want to setup AWS
+    // new CloudWatchTransport({
+    //   logGroupName: 'northcoders-news',
+    //   logStreamName: 'test-stream',
+    //   createLogGroup: true,
+    //   createLogStream: true,
+    //   submissionInterval: 2000,
+    //   submissionRetryCount: 1,
+    //   batchSize: 20,
+    //   awsConfig: {
+    //     accessKeyId,
+    //     secretAccessKey,
+    //     region
+    //   },
+    //   formatLog: item => `${item.level}: ${item.message}`
+    // })
     // Comment out this Transport instance if you don't want to setup AWS
   ]
 });

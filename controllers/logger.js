@@ -1,6 +1,7 @@
 const log = require('../logger.js');
 const { generalLog } = require('../utils');
-const { password } = require('../config');
+const { password } =
+  process.env.NODE_ENV === 'production' ? process.env : require('../config');
 
 const getLogLevel = (req, res, next) => {
   res.send({ msg: `The current log level is ${log.level}` });
