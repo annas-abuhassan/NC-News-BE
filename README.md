@@ -80,7 +80,8 @@ This project requires the following packages:
 
    const config = {
      test: {
-       DB_URL: 'mongodb://localhost:27017/nc_news_test'
+       DB_URL: 'mongodb://localhost:27017/nc_news_test',
+       password: `THIS IS THE PASSWORD USED TO CHANGE THE LOGGING LEVEL, SET THIS TO WHATEVER YOU WISH`
      },
      development: {
        DB_URL: 'mongodb://localhost:27017/nc_news',
