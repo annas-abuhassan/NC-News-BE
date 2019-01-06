@@ -1,6 +1,6 @@
 const { createLogger, format, transports } = require('winston');
 const CloudWatchTransport = require('winston-aws-cloudwatch');
-const { accessKeyId, secretAccessKey, region } =
+const { accessKeyId, secretAccessKey, region, logGroupName, logStreamName } =
   process.env.NODE_ENV === 'production' ? process.env : require('./config'); // Comment this out if you don't want to setup AWS
 
 const log = createLogger({
@@ -23,8 +23,8 @@ const log = createLogger({
     }),
     // Comment out this Transport instance if you don't want to setup AWS
     new CloudWatchTransport({
-      logGroupName: 'northcoders-news',
-      logStreamName: 'test-stream',
+      logGroupName,
+      logStreamName,
       createLogGroup: true,
       createLogStream: true,
       submissionInterval: 2000,
