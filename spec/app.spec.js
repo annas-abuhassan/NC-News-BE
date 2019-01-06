@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'test';
 const { expect } = require('chai');
-const { password } = require('../config/logger.js');
+const { password } = require('../config');
 const app = require('../app');
 const request = require('supertest')(app);
 const mongoose = require('mongoose');
