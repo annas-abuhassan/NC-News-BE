@@ -1,6 +1,7 @@
 const { createLogger, format, transports } = require('winston');
 const CloudWatchTransport = require('winston-aws-cloudwatch');
-const { accessKeyId, secretAccessKey, region } = require('./config'); // Comment this out if you don't want to setup AWS
+const { accessKeyId, secretAccessKey, region } =
+  process.env.NODE_ENV === 'production' ? process.env : require('./config'); // Comment this out if you don't want to setup AWS
 
 const log = createLogger({
   level: process.env.LOGGING_LEVEL || 'debug',
