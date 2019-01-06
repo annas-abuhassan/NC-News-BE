@@ -1,6 +1,7 @@
 # Northcoders News API
 
-The aim of this project was to build a RESTful API using both express and mongoDB.
+The aim of this project was to build a RESTful API using both express and mongoDB.  
+As of 06/01/2019, this project now integrates third party logging for all API calls with AWS CloudWatch.
 
 A live version of this app has can be found [here](https://nc-news-aah.herokuapp.com)
 
@@ -19,6 +20,8 @@ This project requires the following packages:
 - [chai](https://www.npmjs.com/package/chai)
 - [nodemon](https://www.npmjs.com/package/nodemon)
 - [supertest](https://www.npmjs.com/package/supertest)
+- [winston](https://www.npmjs.com/package/winston)
+- [winston-aws-cloudwatch](https://www.npmjs.com/package/winston-aws-cloudwatch)
 
 ### Steps
 
@@ -44,20 +47,20 @@ This project requires the following packages:
 
    ```
    mkdir config
-   touch config/config.js
+   touch config/index.js
    ```
 
-5. Paste the following code into your config.js
+5. Add the following code into your index.js. If you want to make use of AWS CloudWatch logging, include your secret information
 
    ```javascript
-   const NODE_ENV = process.env.NODE_ENV || "development";
+   const NODE_ENV = process.env.NODE_ENV || 'development';
 
    const config = {
      test: {
-       DB_URL: "mongodb://localhost:27017/nc_news_test"
+       DB_URL: 'mongodb://localhost:27017/nc_news_test'
      },
      development: {
-       DB_URL: "mongodb://localhost:27017/nc_news"
+       DB_URL: 'mongodb://localhost:27017/nc_news'
      }
    };
 
@@ -70,14 +73,37 @@ This project requires the following packages:
    npm run seed:dev
    ```
 
-7. Start the express server:
+7. Configure your log settings in your config/index.js file, replace all the AWS values with ones from your own CloudWatch service:
+
+   ```javascript
+   const NODE_ENV = process.env.NODE_ENV || 'development';
+
+   const config = {
+     test: {
+       DB_URL: 'mongodb://localhost:27017/nc_news_test'
+     },
+     development: {
+       DB_URL: 'mongodb://localhost:27017/nc_news',
+       accessKeyId: 'AWS CLOUDWATCH ACCESS KEY ID',
+       secretAccessKey: 'AWS CLOUDWATCH SECRET ACCESS KEY',
+       region: 'AWS CLOUDWATCH REGION',
+       logGroupName: 'AWS LOG GROUP NAME',
+       logStreamName: 'AWS LOG STREAM NAME',
+       password: `THIS IS THE PASSWORD USED TO CHANGE THE LOGGING LEVEL, SET THIS TO WHATEVER YOU WISH`
+     }
+   };
+
+   module.exports = config[NODE_ENV];
+   ```
+
+8. Start the express server:
 
    ```
    npm run dev
    ```
 
 The API is now accessible through port 9090.  
-All possible routes for this API can be found at https://localhost:9090/
+Documentation for this API has been made with Postman and can be found [here.](https://documenter.getpostman.com/view/5314514/RznEJxtF)
 
 ## Testing
 
@@ -92,7 +118,8 @@ npm t
 ## Deployment
 
 This app has been deployed to [Heroku](https://dashboard.heroku.com/).  
-MongoDB data is currently hosted using [mLabs](https://mlab.com/).
+MongoDB data is currently hosted using [mLabs](https://mlab.com/).  
+Logging integration made possible through [AWS Cloudwatch.](https://aws.amazon.com/cloudwatch/)
 
 ## Authors
 
