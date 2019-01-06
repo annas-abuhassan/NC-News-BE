@@ -1,9 +1,13 @@
-const { Article, Comment, Topic } = require("../models");
-const { formatArticlesWithCommentCount, checkDoc } = require("../utils");
+const { Article, Comment, Topic } = require('../models');
+const {
+  formatArticlesWithCommentCount,
+  checkDoc,
+  generalLog
+} = require('../utils');
 
 const getArticles = (req, res, next) => {
   Article.find()
-    .populate("created_by")
+    .populate('created_by')
     .lean()
     .then(articleDocs => {
       return Promise.all([articleDocs, Comment.find()]);
@@ -11,6 +15,7 @@ const getArticles = (req, res, next) => {
     .then(([articleDocs, commentDocs]) => {
       const articles = formatArticlesWithCommentCount(articleDocs, commentDocs);
       res.send({ articles });
+      generalLog(req, res);
     })
     .catch(next);
 };
@@ -18,7 +23,7 @@ const getArticles = (req, res, next) => {
 const getArticleById = (req, res, next) => {
   return Promise.all([
     Article.findById(req.params.article_id)
-      .populate("created_by")
+      .populate('created_by')
       .lean(),
     Comment.count({ belongs_to: req.params.article_id })
   ])
@@ -29,13 +34,14 @@ const getArticleById = (req, res, next) => {
         comment_count: commentCount
       };
       res.send({ article });
+      generalLog(req, res);
     })
     .catch(next);
 };
 
 const getArticlesByTopic = (req, res, next) => {
   Article.find({ belongs_to: req.params.slug })
-    .populate("created_by")
+    .populate('created_by')
     .lean()
     .then(articleDocs => {
       return Promise.all([articleDocs, Comment.find()]);
@@ -43,6 +49,7 @@ const getArticlesByTopic = (req, res, next) => {
     .then(([articleDocs, commentDocs]) => {
       const articles = formatArticlesWithCommentCount(articleDocs, commentDocs);
       res.send({ articles });
+      generalLog(req, res);
     })
     .catch(next);
 };
@@ -67,13 +74,14 @@ const addArticleByTopic = (req, res, next) => {
         comment_count: 0
       };
       res.status(201).send({ article });
+      generalLog(req, res, 'body');
     })
     .catch(next);
 };
 
 const makeArticleVote = (req, res, next) => {
   const voteInc =
-    req.query.votes === "up" ? 1 : req.query.votes === "down" ? -1 : 0;
+    req.query.votes === 'up' ? 1 : req.query.votes === 'down' ? -1 : 0;
   Article.findByIdAndUpdate(
     { _id: req.params.article_id },
     {
@@ -84,6 +92,7 @@ const makeArticleVote = (req, res, next) => {
     .then(article => {
       checkDoc(article);
       res.send({ article });
+      generalLog(req, res, 'query');
     })
     .catch(next);
 };
