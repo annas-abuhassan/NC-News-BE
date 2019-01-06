@@ -1,6 +1,6 @@
 const { createLogger, format, transports } = require('winston');
 const CloudWatchTransport = require('winston-aws-cloudwatch');
-const awsConfig = require('./config/logger.js');
+const { awsConfig } = require('./config'); // Comment this out if you don't want to setup AWS
 
 const log = createLogger({
   level: process.env.LOGGING_LEVEL || 'debug',
@@ -20,6 +20,7 @@ const log = createLogger({
         )
       )
     }),
+    // Comment out this Transport instance if you don't want to setup AWS
     new CloudWatchTransport({
       logGroupName: 'northcoders-news',
       logStreamName: 'test-stream',
@@ -31,6 +32,7 @@ const log = createLogger({
       ...awsConfig,
       formatLog: item => `${item.level}: ${item.message}`
     })
+    // Comment out this Transport instance if you don't want to setup AWS
   ]
 });
 module.exports = log;
